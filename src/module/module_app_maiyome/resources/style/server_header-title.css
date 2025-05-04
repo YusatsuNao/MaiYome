@@ -1,0 +1,175 @@
+.title-bar {
+	background-color: rgb(44,44,44);
+	color: #EEE;
+	display: inline-block;
+	padding: 0px;
+	align-items: center;
+	-webkit-app-region: drag;
+	user-select: none;
+	z-index: 999;
+	position: fixed;
+	width: -webkit-fill-available;
+	height: 30px;
+}
+.title-bar button {
+	background-color: transparent;
+	border: none;
+	color: #DDD;
+	font-size: 20px;
+	cursor: pointer;
+	-webkit-app-region: no-drag;
+	padding: 0px;
+	margin: 0px;
+	margin-top: 0px;
+	width: 30px;
+	height: 30px;
+	border-radius: 0px;
+}
+.title-bar button:hover {
+	background-color: #2c2f33;
+	color: #DDD;
+}
+.title-bar .title-txt {
+	float: left;
+	padding: 0px;
+	margin: 6px 4px 6px 30px;
+	font-family: "Titillium";
+	font-size: 14px;
+	font-weight: 100;
+}
+.title-bar .title-btn {
+    float: right;
+    margin: 0px 5px 0px 0px;
+    height: 28px;
+    top: 0%;
+    position: relative;
+}
+
+.topbar {
+	height: 30px;
+	background-color: transparent;
+	color: #DDD;
+	display: flex;
+	align-items: center;
+	padding: 0 0px;
+	position: relative;
+}
+
+.hamburger {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background-color: transparent;
+	color: white;
+	border: none;
+	-webkit-app-region: no-drag;
+}
+
+.menu-container {
+	display: none;
+	flex-direction: row;
+	margin-left: 0px;
+	-webkit-app-region: no-drag;
+}
+
+.menu-container.active {
+	display: flex;
+}
+
+.menu-item {
+	position: relative;
+	padding: 0 12px;
+	line-height: 30px;
+	cursor: pointer;
+	font-family: var(--default-font-1);
+}
+.hamburger.active, .hamburger:hover, .hamburger:active, .menu-item:hover, .menu-item:active {
+	background-color: #111;
+}
+
+.submenu {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	background-color: #222;
+	display: none;
+	flex-direction: column;
+	min-width: 160px;
+	z-index: 10;
+    outline: 1px solid #333;
+}
+
+.menu-item:hover .submenu {
+	display: flex;
+}
+
+.submenu div {
+	padding: 8px 12px;
+	cursor: pointer;
+}
+
+.submenu div:hover {
+	background-color: #666;
+}
+
+.title-icon {
+    width: 22px; height: 22px; margin: 4px; position: fixed;
+    background: transparent url(../maiyome.png) no-repeat 50% 50% / contain;
+}
+
+.title-btn > button:hover, .title-btn > button:focus-visible {
+	filter: brightness(1); background-color: #111; outline: 0px;
+}
+
+#minimize {
+	width: 30px; height: 30px;
+}
+#minimize span {
+	width: 20px; height: 20px; margin: 5px;  display: block; margin: 0px auto;
+	background: transparent url(../media/header_minimize.png) no-repeat 5% 50% / contain;
+}
+#maximize {
+	width: 30px; height: 30px;
+}
+#maximize span {
+	width: 20px; height: 20px; margin: 5px;  display: block; margin: 0px auto;
+	background: transparent url(../media/nav_button-FULLSCREEN.png) no-repeat 50% 50% / contain;
+}
+#maximize.active {
+	width: 30px; height: 30px;
+}
+#maximize.active span {
+	width: 20px; height: 20px; margin: 5px;  display: block; margin: 0px auto;
+	background: transparent url(../media/header_maximize.png) no-repeat 5% 50% / contain;
+}
+#close {
+	width: 30px; height: 30px;
+}
+#close span {
+	width: 20px; height: 20px; margin: 5px;  display: block; margin: 0px auto;
+	background: transparent url(../media/header_close.png) no-repeat 5% 50% / contain;
+}
+
+/* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */
+/* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */
+/* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */ /* STATUS BAR */
+
+#information_bar {
+    width: -webkit-fill-available;
+    height: 20px;
+    bottom: 0px;
+    z-index: 999;
+    position: fixed;
+    background-color: #111;
+	display: flex;
+	border-top: 1px solid #202020;
+}
+.status_data {
+    padding: 0px 15px;
+    font-size: 12px;
+    margin: 1px;
+    border-right: 2px solid #444;
+}

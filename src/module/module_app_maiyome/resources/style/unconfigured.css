@@ -1,0 +1,168 @@
+
+#imageGallery-header {
+    padding: 0px !important;
+    margin: 0px auto;
+    position: fixed;
+    top: 128px;
+    width: -webkit-fill-available;
+    padding: 0em 1em !important;
+    background: #111;
+    z-index: 1;
+    display: none;
+}
+#imageGallery-header.visible {
+    display: block; }
+#imageGallery-header > .thumbnail-details {
+    height: 24px;
+    padding: 0px;
+    border-bottom: 0px solid #333;
+    gap: 0px;
+}
+#imageGallery-header > .thumbnail-details > .global-col {
+    border: 0px solid !important;
+    height: 20px;
+}
+#imageGallery-header > .thumbnail-details > .details-col1 {
+    min-width: 58px !important;
+}
+#imageGallery-header > .thumbnail-details > .details-col2 {
+    min-width: 209px !important;
+}
+#imageGallery-header > .thumbnail-details > .details-col3 {
+    min-width: 48px !important;
+}
+#imageGallery-header > .thumbnail-details > .details-col4 {
+    min-width: 108px !important;
+}
+#imageGallery-header > .thumbnail-details > .details-col4 {
+    min-width: 108px !important;
+}
+#imageGallery-header > .thumbnail-details > .details-col6 {
+    min-width: 82px !important;
+}
+#imageGallery-header > .thumbnail-details > .details-col8 {
+    min-width: 108px !important;
+}
+#imageGallery-header > .thumbnail-details > .details-col9 {
+    min-width: 108px !important;
+}
+#imageGallery-header > .thumbnail-details > .details-col0 {
+    min-width: 82px !important;
+}
+.details-col0 > tag-list {
+    justify-content: center;
+}
+
+
+#toolbar {
+    position: fixed;
+    z-index: 10;
+    background: rgba(20, 20, 20, 0.5);
+    padding: 4px;
+    border-radius: 0px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    bottom: 20px;
+    margin: 0px auto;
+}
+
+#container, #containerViewer {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0), linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0), rgb(61, 61, 61, 0.9);
+    background-repeat: repeat, repeat;
+    background-position: 0px 0, 5px 5px;
+    -webkit-transform-origin: 0 0 0;
+    transform-origin: 0 0 0;
+    -webkit-background-origin: padding-box, padding-box;
+    background-origin: padding-box, padding-box;
+    -webkit-background-clip: border-box, border-box;
+    background-clip: border-box, border-box;
+    -webkit-background-size: 10px 10px, 10px 10px;
+    background-size: 10px 10px, 10px 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    -webkit-transform: scaleX(1) scaleY(1) scaleZ(1);
+    transform: scaleX(1) scaleY(1) scaleZ(1);
+    cursor: grab;
+}
+#containerComparator  {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0), linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0), rgb(61, 61, 61, 0.9);
+    background-repeat: repeat, repeat;
+    background-position: 0px 0, 5px 5px;
+    -webkit-transform-origin: 0 0 0;
+    transform-origin: 0 0 0;
+    -webkit-background-origin: padding-box, padding-box;
+    background-origin: padding-box, padding-box;
+    -webkit-background-clip: border-box, border-box;
+    background-clip: border-box, border-box;
+    -webkit-background-size: 10px 10px, 10px 10px;
+    background-size: 10px 10px, 10px 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    -webkit-transform: scaleX(1) scaleY(1) scaleZ(1);
+    transform: scaleX(1) scaleY(1) scaleZ(1);
+    cursor: grab;
+}
+
+#imageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    user-select: none;
+    background-color: rgba(22, 22, 22, 0.8);
+}
+
+#imageWrapper img {
+    display: block;
+    pointer-events: none;
+    max-width: none;
+    transition: image-rendering 0.1s;
+}
+
+#MainViewer {
+    display: none;
+    position: fixed;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    overflow: unset;
+    left: 175px;
+    top: 128px;
+    bottom: 20px;
+    background: transparent;
+}
+#MainComparator {
+    display: none;
+    position: fixed;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    overflow: unset;
+    left: 175px;
+    top: 128px;
+    bottom: 20px;
+    background: transparent;
+}
+#imageComparator {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+#comparator-wrapper input[type=range]::-webkit-slider-thumb {
+    background: #0075e2;
+    cursor: ew-resize;
+}	

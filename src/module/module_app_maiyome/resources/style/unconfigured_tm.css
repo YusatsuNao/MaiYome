@@ -1,0 +1,80 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+#tag-listing {
+    display: flex;
+    flex-wrap: wrap;
+    height: 60px;
+    width: -webkit-fill-available;
+    gap: 3px;
+    overflow-y: auto;
+}
+.tag-control { display: flex; gap: 10px; align-items: center; margin-top: 10px; }
+.tag-control label { margin-right: 5px; }
+
+
+
+#tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: space-between;
+    border: 2px solid transparent;
+}
+
+#tagContainer::after {
+    content: '';
+    flex: auto;
+}
+
+#tagContainer code {
+    border: 2px solid transparent;
+}
+#tagContainer code:hover {
+    background: #222;
+    color: #DDD;
+}
+
+#tagContainer code[aria-selected="true"] {
+    border: 2px solid #007bff;
+}
+
+#tag-filter-container {
+    margin-top: 10px;
+}
+
+#real-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #222;
+    color: white;
+}
+
+#real-input::placeholder {
+    color: #888;
+}
+textarea {
+    width: -webkit-fill-available;
+    resize: none;
+    margin: 5px;
+    background: #222222;
+    border: 1px solid #333;
+    color: #DDD;
+    font-family: var(--default-font-1);
+    height: 200px;
+    overflow-y: auto;
+    border-style: 1px solid #222222;
+}
+textarea:focus-visible {
+    outline: 0px solid transparent;
+    border-style: dashed;
+}

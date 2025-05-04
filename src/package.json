@@ -1,0 +1,34 @@
+{
+	"name": "maiyome",
+	"version": "1.0.0",
+	"description": "MaiYome - A Local Based Booru for Your Waifu Collection",
+	"author": "Faise Riefenstahl",
+	"keywords": [],
+	"license": "ISC",
+	"main": "maiyome.js",
+	"scripts": {
+		"start": "electron . --trace-warnings",
+		"start_forge": "electron-forge start",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"package": "electron-forge package",
+		"make": "electron-forge make"
+	},
+	"config": {
+		"forge": "forge.config.js"
+	},
+	"devDependencies": {
+		"@electron-forge/cli": "^7.8.0",
+		"@electron-forge/maker-squirrel": "^7.8.0",
+		"@electron-forge/maker-zip": "^7.8.0",
+		"electron": "^36.1.0"
+	},
+	"dependencies": {
+		"electron-dialog": "^2.0.0",
+		"exiftool": "^0.0.3",
+		"fs-extra": "^11.3.0",
+		"node-exiftool": "^2.3.0",
+		"sharp": "^0.33.5",
+		"sqlite3": "^5.1.7",
+		"uuid": "^11.1.0"
+	}
+}

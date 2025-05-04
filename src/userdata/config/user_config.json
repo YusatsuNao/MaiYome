@@ -1,0 +1,17 @@
+{
+  "version": "MaiYome v1.0β",
+  "language": "en-US",
+  "db_serve": "LOCAL",
+  "db_name": "userdata/main.db",
+  "cloud_path": "D:\\Cloud\\main.db",
+  "thumbnail_path": "userdata/.thumbnails",
+  "fingerprint_hash": "64",
+  "duplicate_sensitivity": "1",
+  "default_booru_search": "",
+  "default_filter": "s$private",
+  "gallery_type": "horizontal",
+  "gallery_item_show__type": "",
+  "gallery_item_show__sorter": "date_imported",
+  "gallery_item_show__order": "desc",
+  "gallery_item_show__default": ""
+}

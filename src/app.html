@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MaiYome</title>
+		<link rel="stylesheet" href="module/module_app_maiyome/resources/style/server_header-title.css" id="header_css">
+		<link rel="stylesheet" href="module/module_app_maiyome/resources/style/server_main.css" id="main_css">
+		<link rel="stylesheet" href="module/module_app_maiyome/resources/style/server_nav.css" id="main_nav">
+		<link rel="stylesheet" href="module/module_app_maiyome/resources/style/server_warn.css" id="main_nav">
+		<link rel="stylesheet" href="module/module_app_maiyome/resources/style/unconfigured.css" id="unconfigured">
+		<script src="module/module_app_maiyome/scripts/com_onLoad.js"></script>
+	</head>
+	<body>
+		<app-internal>
+			<div id="warn">
+				<div id="warn_bg">
+					<div id="warn_container">
+						<div id="warn_header">
+							<span><!-- {value is generated automatically based on action} --></span>
+						</div>
+						<div id="warn_main">
+							<div class="warning_top">
+								<span><!-- {value is generated automatically based on action} --></span>								
+							</div>
+							<div class="warning_middle">
+								<span><!-- {value is generated automatically based on action} --></span>								
+							</div>
+							<div class="warning_bottom">
+								<button class="nav_button cancel" id="warn_cancel">
+									<span>CANCEL</span></button>
+								<button class="nav_button importAll" id="warn_importAll" data-action="importAll">
+									<span>IMPORT ALL</span></button>
+								<button class="nav_button proceed" id="warn_proceed"  data-action="null">
+									<span>PROCEED</span></button>
+								<!-- {value of data-action is generated automatically based on action} -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav id="navigation">
+				<div class="top_navigation">
+					<button class="nav_button nav_header_main control_load" id="controlImport" data-action="controlImport">
+						<span class="nav_icon"></span>
+						<a class="nav_text" data-i18n="nav-A1">IMPORT SELECTION</a>
+					</button>
+					<div class="nav_button nav_header_main control_sort_drop" id="sortMenu">
+						<span class="nav_icon"></span>
+						<a class="nav_text" data-i18n="nav-sort">Sort</a>
+						<div class="dropdown_menu">
+							<div class="dropdown_menu_child">
+								<button class="nav_button nav_header_main control_sort_a sort_menu_drop" id="sortAscBtn" data-action="sortAscBtn">
+									<span class="nav_icon"></span>
+									<a class="nav_text"></a></button>
+								<button class="nav_button nav_header_main control_sort_z sort_menu_drop" id="sortDescBtn" data-action="sortDescBtn">
+									<span class="nav_icon"></span>
+									<a class="nav_text" data-i18n="nav-A2">Name</a></button>
+							</div>
+							<div class="dropdown_menu_child">
+							<button class="nav_button nav_header_main control_sort_a sort_menu_drop" id="sortAscDateCreatedBtn" data-action="sortAscDateCreatedBtn">
+								<span class="nav_icon"></span>
+								<a class="nav_text"></a></button>
+							<button class="nav_button nav_header_main control_sort_z sort_menu_drop" id="sortDescDateCreatedBtn" data-action="sortDescDateCreatedBtn">
+								<span class="nav_icon"></span>
+								<a class="nav_text" data-i18n="nav-A3">Created</a></button>
+							</div>
+							<div class="dropdown_menu_child">
+							<button class="nav_button nav_header_main control_sort_a sort_menu_drop" id="sortAscDateModifiedBtn" data-action="sortAscDateModifiedBtn">
+								<span class="nav_icon"></span>
+								<a class="nav_text"></a></button>
+							<button class="nav_button nav_header_main control_sort_z sort_menu_drop" id="sortDescDateModifiedBtn" data-action="sortDescDateModifiedBtn">
+								<span class="nav_icon"></span>
+								<a class="nav_text" data-i18n="nav-A4">Modified</a></button>
+							</div>
+							<div class="dropdown_menu_child">
+							<button class="nav_button nav_header_main control_sort_a sort_menu_drop" id="sortAscDateAddedBtn" data-action="sortAscDateAddedBtn">
+								<span class="nav_icon"></span>
+								<a class="nav_text"></a></button>
+							<button class="nav_button nav_header_main control_sort_z sort_menu_drop" id="sortDescDateAddedBtn" data-action="sortDescDateAddedBtn">
+								<span class="nav_icon"></span>
+								<a class="nav_text" data-i18n="nav-A5">Added</a></button>
+							</div>
+							<button class="nav_button nav_header_main control_sort_r sort_menu_drop" id="sortRandBtn" data-action="sortRandBtn">
+								<span class="nav_icon"></span>
+								<a class="nav_text" data-i18n="nav-A6">Random</a></button>
+						</div>
+					</div>	
+					<button class="nav_button nav_header_main control_view_a" id="verticalView" data-action="vertical">
+						<span class="nav_icon"></span><a class="nav_text" data-i18n="nav-B1">Vertical</a></button>
+					<button class="nav_button nav_header_main control_view_b" id="horizontalView" data-action="horizontal">
+						<span class="nav_icon"></span><a class="nav_text" data-i18n="nav-B2">Horizontal</a></button>
+					<button class="nav_button nav_header_main control_view_c" id="gridView" data-action="grid">
+						<span class="nav_icon"></span><a class="nav_text" data-i18n="nav-B3">Grid</a></button>
+					<button class="nav_button nav_header_main control_view_d" id="detailsView" data-action="details">
+						<span class="nav_icon"></span><a class="nav_text" data-i18n="nav-B4">Details</a></button>
+
+					<div class="nav_button nav_header_main control_sort_drop" id="sortMenu">
+						<span class="nav_icon"></span>
+						<a class="nav_text" data-i18n="nav-sort">FILTER</a>
+						<div class="dropdown_menu">
+							<button class="nav_button nav_header_main control_default" id="defaultExclude" data-action="defaultExclude">
+								<span class="nav_icon"></span><a class="nav_text" data-i18n="nav-B5">EXCLUDE NSFW</a></button>
+							<button class="nav_button nav_header_main control_error" id="errorOnly" data-action="showError">
+								<span class="nav_icon"></span><a class="nav_text">ERROR</a></button>
+							<button class="nav_button nav_header_main control_untag" id="untag" data-action="untag">
+								<span class="nav_icon"></span><a class="nav_text" data-i18n="nav-A8">NO TAG</a></button>
+						</div>
+					</div>
+					<button class="nav_button nav_header_main control_duplicate" id="duplicate" data-action="duplicate">
+						<span class="nav_icon"></span><a class="nav_text" data-i18n="nav-A8">DUPLICATE</a></button>
+					<button class="nav_button nav_header_main control_genLoad" id="genLoad" data-action="genLoad">
+						<span class="nav_icon"></span><a class="nav_text" data-i18n="nav-A8">Manual Load</a></button>
+					<button class="nav_button nav_header_main control_compare" id="compare" data-action="compare">
+						<span class="nav_icon"></span><a class="nav_text" data-i18n="nav-A8">Compare</a></button>
+				</div>
+				<div class="middle_navigation">
+					<div id="tag-filter-container" class="nav_input">
+						<div id="tag-input">
+							<input id="real-input" type="text" autocomplete="off" placeholder="SEARCH TAG">
+						</div>
+						<div id="suggestion-box"></div>
+					</div>
+					<button class="nav_button nav_header_main control_reset" id="controlGallery_FilterR" data-action="controlGallery_FilterR">
+						<span class="nav_icon"></span>
+						<a class="nav_text" data-i18n="test"></a>
+					</button>
+					<div id="tag-filter-container" class="nav_input">
+						<div id="tag-input-restrict">
+							<input id="real-input-restrict" type="text" autocomplete="off" placeholder="RESTRICT TAG">
+						</div>
+						<div id="suggestion-box-restrict"></div>
+					</div>
+					<button class="nav_button nav_header_main control_reset" id="controlGallery_StrictR" data-action="controlGallery_StrictR">
+						<span class="nav_icon"></span>
+						<a class="nav_text" data-i18n="test"></a>
+					</button>
+				</div>
+				<div class="bottom_nanvigation">
+					<div id="tag-set-container" class="nav_input">
+						<div id="tag-set-input">
+							<input id="real-input-set" type="text" autocomplete="off" placeholder="APPLY TAG">
+						</div>
+						<div id="suggestion-box-set"></div>
+					</div>
+					<button class="nav_button nav_header_main control_applierAll" id="applyTagButton" data-action="controlPreTAG_replace">
+						<span class="nav_icon"></span><a class="nav_text" data-i18n="nav-B5">Reapply</a></button>
+					<button class="nav_button nav_header_main control_applierSelection" id="addTagButton" data-action="preTAG_add">
+						<span class="nav_icon"></span><a class="nav_text" data-i18n="nav-B6">Add</a></button>
+					<button class="nav_button nav_header_main control_removerAll" id="removeTagButton" data-action="preTAG_remove">
+						<span class="nav_icon"></span><a class="nav_text" data-i18n="nav-B7">Remove</a></button>
+					<button class="nav_button nav_header_main control_removerSelection" id="clearTagButton" data-action="controlPreTAG_reset">
+						<span class="nav_icon"></span><a class="nav_text" data-i18n="nav-B8">Clear All</a></button>
+					<button class="nav_button nav_header_main control_reset" id="controlGallery_EditorR" data-action="controlGallery_EditorR">
+						<span class="nav_icon"></span>
+						<a class="nav_text" data-i18n="test"></a>
+					</button>
+				</div>
+			</nav>
+			<main-gallery>
+				<section id="MainList">
+					<div id="section-tag">
+						<div id="tag-list">
+							<code>list of tag will be displayed here</code>
+						</div>
+						<div id="metadata-list">
+							<code>Metadata will be displayed here</code>
+						</div>
+					</div>
+					<div id="section-gallery">
+						<div id="imageGallery-header">
+							<div class="thumbnail-details">
+								<div class="details-col1 global-col"><span>Image</span></div>
+								<div class="details-col2 global-col"><span>General Info</span></div>
+								<div class="details-col3 global-col"><span>Format</span></div>
+								<div class="details-col4 global-col"><span>Dimension</span></div>
+								<!-- <div class="details-col5 global-col"><span>bc86c040c4732e51e004c79743804d03</span></div> -->
+								<div class="details-col6 global-col"><span>File Size</span></div>
+								<!-- <div class="details-col7 global-col"><span>8</span></div> -->
+								<div class="details-col8 global-col"><span>Date Created</span></div>
+								<div class="details-col9 global-col"><span>Date Imported</span></div>
+								<div class="details-col0 global-col"><span>Tag</span></div>
+							</div>
+						</div>
+						<div id="imageGallery"></div>
+					</div>
+				</section>
+				<section id="MainComparator">
+					<div id="toolbar_comparator">
+						<button class="nav_button viewer_button viewer_exit" onclick="closeViewer()"><span>Close Viewer</span></button></div>
+					<div id="containerComparator">
+						<div id="imageComparator">
+						</div>
+					</div>
+				</section>
+				<section id="MainViewer">
+					<div id="toolbar">
+						<button class="nav_button viewer_button viewer_exit" onclick="closeViewer()"><span>Close Viewer</span></button>
+						<button class="nav_button viewer_button viewer_zoomzero" onclick="zoomToOriginal()"><span>1:1 Zoom</span></button>
+						<button class="nav_button viewer_button viewer_fitH" onclick="fitToWidth()"><span>Fit Width</span></button>
+						<button class="nav_button viewer_button viewer_fitV" onclick="fitToHeight()"><span>Fit Height</span></button>
+						<button class="nav_button viewer_button viewer_zoomval" onclick=""><span>100%</span></button>
+					</div>
+					
+					<div id="containerViewer" class="containerViewer">
+						<div id="imageWrapper">
+							<img id="mainImage" src="" alt="Image Viewer">
+						</div>
+					</div>
+				</section>
+			</main-gallery>
+			<status-bar>
+				<div id="information_bar">
+					<div id="info_index_full" class="status_data">{val} Indexed</div>
+					<div id="info_index_error" class="status_data" data-action="showError">{val} Errors</div>
+					<div id="info_selection" class="status_data">{val} Selected</div>
+					<div id="info_duplicate" class="status_data"><span>{val} Duplicates</span></div>
+					<!-- <div id="info_search" class="status_data"><span>ON</span></div> -->
+					<!-- <div id="info_search" class="status_data"><span>ON</span></div> -->
+					<div id="info_search" class="status_data"></div>
+					<div class="nav_button nav_header_slider">
+						<div>
+							<label for="sizeSlider" data-i18n="nav-A7">Gallery Size▐</label>
+							<input type="range" id="sizeSlider" min="100" max="360" value="240" step="20">
+						</div>
+					</div>
+				</div>
+			</status-bar>
+		</app-internal>
+		<script src="module/module_app_maiyome/scripts/com_global_shortcut.js"></script>
+		<script src="module/module_app_maiyome/scripts/com_navigation.js"></script>
+		<script src="module/module_app_maiyome/scripts/com_maingallery.js"></script>
+		<script src="module/module_app_maiyome/scripts/com_gengallery.js"></script>
+		<script src="module/module_app_maiyome/scripts/com_masonry.js"></script>
+		<script src="module/module_app_maiyome/scripts/com_tagfilter.js"></script>
+		<script src="module/module_app_maiyome/scripts/com_tagfilterR.js"></script>
+		<script src="module/module_app_maiyome/scripts/com_tagfilterS.js"></script>
+		<script src="module/module_app_maiyome/scripts/app_viewer.js"></script>
+		<script src="module/module_app_maiyome/scripts/app_statusbar.js"></script>
+		<script src="module/module_app_maiyome/scripts/app_zoom.js"></script>
+		<script src="module/module_app_maiyome/scripts/app_extender.js"></script>
+		<script src="module/module_app_maiyome/scripts/app_lang.js"></script>
+		<script src="module/module_app_maiyome/scripts/app_export.js"></script>
+	</body>
+</html>

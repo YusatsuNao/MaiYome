@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Image Metadata App</title>
+		<link rel="stylesheet" href="module/module_app_maiyome/resources/style/server_header-title.css" id="header_css">
+		<link rel="stylesheet" href="module/module_app_maiyome/resources/style/server_main.css" id="main_css">
+		<link rel="stylesheet" href="module/module_app_maiyome/resources/style/server_nav.css" id="main_nav">
+		<link rel="stylesheet" href="module/module_app_maiyome/resources/style/unconfigured_tm.css" id="unconfigured">
+		<script>
+			window.addEventListener('DOMContentLoaded', () => {		
+				const config = window.userSettings.getConfig();
+
+				window.redirect.$receive_filemissing((count) => {
+					localStorage.setItem("file_not_found", count);
+					updateStatusBar();
+				});
+
+				window.redirect.$receive_dataduplicate((count) => {
+					localStorage.setItem("data_duplicate_found", count);
+					updateStatusBar();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<app-internal>
+			<div id="warn" style="display: none;">
+				<div id="warn_bg">
+					<div id="warn_container">
+						<div id="warn_header">
+							<span><!-- {value is generated automatically based on action} --></span>
+						</div>
+						<div id="warn_main">
+							<div class="warning_top">
+								<span><!-- {value is generated automatically based on action} --></span>								
+							</div>
+							<div class="warning_middle">
+								<span><!-- {value is generated automatically based on action} --></span>								
+							</div>
+							<div class="warning_bottom">
+								<button class="nav_button cancel" id="warn_cancel">
+									<span>CANCEL</span></button>
+								<button class="nav_button importAll" id="warn_importAll" data-action="importAll">
+									<span>IMPORT ALL</span></button>
+								<button class="nav_button proceed" id="warn_proceed"  data-action="null">
+									<span>PROCEED</span></button>
+								<!-- {value of data-action is generated automatically based on action} -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav id="navigation">
+				<div class="list_navigation">
+					<div id="tag-listing"></div>
+				</div>
+				<div class="middle_navigation">
+					
+				</div>
+				<div class="bottom_nanvigation">						
+					<div id="tag-filter-container" class="nav_input tag_filter">
+						<div id="tag-input">
+							<input id="real-input" class="tag_filter" type="text" autocomplete="off" placeholder="SEARCH TAG">
+						</div>						
+						<div id="suggestion-box"></div>
+					</div>
+					<button class="nav_button nav_header_main control_reset ignore_icon" id="controlResetFilter" data-action="controlResetFilter">
+						<span class="nav_icon"></span>
+						<a class="nav_text" data-i18n="test">RESET FILTER</a>
+					</button>					
+					<div class="nav_button nav_header_main control_sort_drop" id="filterTagTypeMenu">
+						<span class="nav_icon"></span>
+						<a class="nav_text">TAG TYPE</a>
+						<div class="dropdown_menu">
+							<button class="nav_button nav_header_main control_tagtype ignore_icon" data-action="tagtype-c">
+								<span class="nav_icon"></span><a class="nav_text">C - Copyright</a></button>
+							<button class="nav_button nav_header_main control_tagtype ignore_icon" data-action="tagtype-h">
+								<span class="nav_icon"></span><a class="nav_text">H - Character</a></button>
+							<button class="nav_button nav_header_main control_tagtype ignore_icon" data-action="tagtype-a">
+								<span class="nav_icon"></span><a class="nav_text">A - Artist</a></button>
+							<button class="nav_button nav_header_main control_tagtype ignore_icon" data-action="tagtype-g">
+								<span class="nav_icon"></span><a class="nav_text">G - General</a></button>
+							<button class="nav_button nav_header_main control_tagtype ignore_icon" data-action="tagtype-s">
+								<span class="nav_icon"></span><a class="nav_text">S - Others</a></button>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<main-gallery>
+				<section id="tagViewer">
+					<div id="section-tag">					
+						<textarea id="newTagsInput" placeholder="Enter new tags, one per line..." rows="auto"></textarea>
+						<button id="addTags" class="nav_button nav_header_main control_addTags ignore_icon">
+							<span class="nav_icon"></span><a class="nav_text">ADD NEW TAG</a></button>
+					</div>
+					<div id="section-gallery">					
+						<div id="tagContainer"></div>
+					</div>
+				</section>
+			</main-gallery>
+			<status-bar>
+				<div id="information_bar">
+					<div id="info_search" class="status_data"></div>
+				</div>
+			</status-bar>	
+		
+		</app-internal>
+		<script src="module/module_app_maiyome/scripts/com_global_shortcut.js"></script>
+		<script src="module/module_app_maiyome/scripts/com_navigation.js"></script>
+		<script src="module/module_app_maiyome/scripts/com_tagmanager.js"></script>
+		<script src="module/module_app_maiyome/scripts/app_extender.js"></script>
+		<script src="module/module_app_maiyome/scripts/app_lang.js"></script>
+		<script src="module/module_app_maiyome/scripts/app_export.js"></script>
+	</body>
+</html>
